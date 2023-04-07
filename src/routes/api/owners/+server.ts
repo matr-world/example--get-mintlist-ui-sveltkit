@@ -4,6 +4,8 @@ import { Connection, PublicKey, type ParsedAccountData } from "@solana/web3.js";
 import connect from "$lib/util/solana/connect";
 import validAddress from "$lib/util/solana/validate-address";
 
+import { HELIUS_KEY } from "$env/static/private";
+
 const getOwner = async (connection:Connection, address:string):Promise<string> => {
     const pubKey = new PublicKey(address);
 
@@ -30,7 +32,10 @@ export async function POST({ locals, request }: RequestEvent) {
     } = await request.json();
 
     const result:Record<string, string> = {};
-    const connection = connect();
+    const connection = new Connection(
+        `https://rpc.helius.xyz/?api-key=${HELIUS_KEY}`,
+        "confirmed"
+    );;
     
     await Promise.all(addresses.map(({ mint }:{mint:string}) => new Promise(async (resolve, reject) => {
         try {

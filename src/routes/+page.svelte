@@ -182,14 +182,14 @@
             fill-rule="nonzero" /></svg>
         <h2 class="m-0">Get First Creator Address</h2>
     </div>
-    <p>To lookup NFTs by creator, you'll need to provide the first creator address of the collection. If you don't have know the first creator, look up one of the NFTs int the collection on Solana Terminal and you'll see "First Creator" in the details.</p>
+    <p>To lookup NFTs by creator, you'll need to provide the first creator address of the collection. If you don't have know the first creator, look up one of the NFTs int the collection on XRAY and you'll see "First Creator" in the details.</p>
     
     <div>
         <a
-            class="btn btn-primary"
-            href="https://solanaterminal.com"
+            class="btn btn-outline"
+            href="https://xray.helius.xyz"
             rel="noreferrer"
-            target="_blank">Solana Terminal</a>
+            target="_blank">XRAY Explorer</a>
     </div>
 </section>
 
